@@ -17,32 +17,35 @@ import Main from './layout/Main.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element:  <Main></Main>
+    element:  <Main></Main>,
+    children:[
+      {
+        path: "/",
+        element:  <Home></Home>
+      },
+      {
+        path:'/about',
+        element:<About></About>
+      },
+      {
+        path:'/resume',
+        element:<Resume></Resume>
+      },
+      {
+        path:'/skill',
+        element:<Skill></Skill>
+      },
+      {
+        path:'/portfolio',
+        element:<Portfolio></Portfolio>
+      },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
+      }
+    ]
   },
-  {
-    path: "/",
-    element:  <Home></Home>
-  },
-  {
-    path:'/about',
-    element:<About></About>
-  },
-  {
-    path:'/resume',
-    element:<Resume></Resume>
-  },
-  {
-    path:'/skill',
-    element:<Skill></Skill>
-  },
-  {
-    path:'/portfolio',
-    element:<Portfolio></Portfolio>
-  },
-  {
-    path:'/contact',
-    element:<Contact></Contact>
-  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
