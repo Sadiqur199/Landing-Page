@@ -49,8 +49,8 @@ const About = () => {
 
         <Animate
        play
-       duration={1.5}
-       delay={1}
+       duration={1}
+       delay={0.5}
        start={{
         transform : 'translateX(-900px)'
        }}
