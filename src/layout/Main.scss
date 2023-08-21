@@ -1,0 +1,7 @@
+.Main{
+  height: 100%;
+
+  &__page-content{
+    height: calc(100% - 80px);
+  }
+}

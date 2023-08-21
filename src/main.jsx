@@ -14,10 +14,12 @@ import Portfolio from './Pages/Portfolio/Portfolio.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import Main from './layout/Main.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
     element:  <Main></Main>,
+    
     children:[
       {
         path: "/",
