@@ -1,10 +1,13 @@
 import React from 'react';
+import PageHeaderContent from '../../PageHeaderContent/PageHeaderContent';
+import { GiSkills } from 'react-icons/gi'
 
 const Skill = () => {
   return (
-    <div>
+    <section id='skill' className='skill'>
+      <PageHeaderContent headerText ='My Skill' icon={<GiSkills size={40}/>}></PageHeaderContent>
       
-    </div>
+    </section>
   );
 };
 

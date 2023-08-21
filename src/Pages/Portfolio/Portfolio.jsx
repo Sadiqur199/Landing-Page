@@ -1,10 +1,17 @@
 import React from 'react';
+import PageHeaderContent from '../../PageHeaderContent/PageHeaderContent';
+import { IoMdContact } from 'react-icons/io'
+
 
 const Portfolio = () => {
   return (
-    <div>
+    <section id='portfolio' className='portfolio'>
+      <PageHeaderContent headerText ='My Portfolio' icon={<IoMdContact size={40}/>}></PageHeaderContent>
       
-    </div>
+      <div>
+
+      </div>
+    </section>
   );
 };
 
