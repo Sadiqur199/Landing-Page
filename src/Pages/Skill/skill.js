@@ -13,6 +13,14 @@ const skillApi = [
         percentage:'90'
       },
       {
+        skillName:"Tailwind",
+        percentage:'90'
+      },
+      {
+        skillName:"Bootstrap",
+        percentage:'90'
+      },
+      {
         skillName:"JAVASCRIPT",
         percentage:'80'
       },
