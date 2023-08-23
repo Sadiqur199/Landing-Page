@@ -1,15 +1,99 @@
 import React from 'react';
 import PageHeaderContent from '../../PageHeaderContent/PageHeaderContent';
 import { IoMdContact } from 'react-icons/io'
+import './Portfolio.scss'
+import image1 from '../../images/My-Flix.png'
+import image2 from '../../images/Fitness-Exercise.png'
+import image3 from '../../images/ZET.png'
+import image4 from '../../images/CarToys-Home.png'
+import image5 from '../../images/Art-Craft-School-Home.png'
+import image6 from '../../images/Chines-Food-Restaurant-Home.png'
+import image7 from '../../images/Car-Doctor.png'
 
+const portfolioData = [
+  {
+    id : 2,
+    name : 'Movie Site',
+    image : image1
+  },
+  {
+    id : 3,
+    name : 'Fitness Site',
+    image : image2
+  },
+  {
+    id : 3,
+    name : 'Promotion Site',
+    image : image3
+  },
+  {
+    id : 2,
+    name : 'Car Site',
+    image : image4
+  },
+  {
+    id : 3,
+    name : 'ArtSchool Site',
+    image : image5
+  },
+  {
+    id : 2,
+    name : 'Restaurant Site',
+    image : image6
+  },
+  {
+    id : 3,
+    name : 'Car Service Site',
+    image : image7
+  },
+]
+
+const filterData = [
+  {
+    filterId : 1,
+    label : 'All'
+  },
+  {
+    filterId : 2,
+    label : 'Development'
+  },
+  {
+    filterId : 3,
+    label : 'Design'
+  }
+]
 
 const Portfolio = () => {
   return (
     <section id='portfolio' className='portfolio'>
       <PageHeaderContent headerText ='My Portfolio' icon={<IoMdContact size={40}/>}></PageHeaderContent>
       
-      <div>
+      <div className='portfolio__content'>
+        <ul className='portfolio__content__filter'>
+          {
+            filterData.map((item)=>(
+              <li key={item.filterId}>
+                {
+                  item.label
+                }
+              </li>
+            ))}
+        </ul>
+        <div className='portfolio__content__cards'>
+          {
+            portfolioData.map((item)=>(
+              <div className='portfolio__content__cards__item' key={item.id}>
+               <div className='portfolio__content__cards__item__image-wrapper'>
+                <a href="">
+                  <img alt={item.name} src={item.image}/>
+                </a>
 
+               </div>
+              </div>
+            ))
+          }
+
+        </div>
       </div>
     </section>
   );
