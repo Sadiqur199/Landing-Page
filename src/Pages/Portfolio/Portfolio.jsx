@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageHeaderContent from '../../PageHeaderContent/PageHeaderContent';
 import { IoMdContact } from 'react-icons/io'
 import './Portfolio.scss'
@@ -64,6 +64,14 @@ const filterData = [
 ]
 
 const Portfolio = () => {
+
+  const [filteredValue , setFilteredValue] = useState(1)
+
+  function handelClick(currentId){
+     setFilteredValue(currentId)
+  }
+
+  console.log(filteredValue)
   return (
     <section id='portfolio' className='portfolio'>
       <PageHeaderContent headerText ='My Portfolio' icon={<IoMdContact size={40}/>}></PageHeaderContent>
@@ -72,7 +80,7 @@ const Portfolio = () => {
         <ul className='portfolio__content__filter'>
           {
             filterData.map((item)=>(
-              <li key={item.filterId}>
+              <li onClick={()=>handelClick(item.filterId)} key={item.filterId}>
                 {
                   item.label
                 }
@@ -82,7 +90,7 @@ const Portfolio = () => {
         <div className='portfolio__content__cards'>
           {
             portfolioData.map((item)=>(
-              <div className='portfolio__content__cards__item' key={item.id}>
+              <div className='portfolio__content__cards__item' key={`cardItem${item.id}`}>
                <div className='portfolio__content__cards__item__image-wrapper'>
                 <a href="">
                   <img alt={item.name} src={item.image}/>
