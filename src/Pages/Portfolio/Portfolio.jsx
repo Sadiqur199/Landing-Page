@@ -63,6 +63,8 @@ const filterData = [
   }
 ]
 
+
+
 const Portfolio = () => {
 
   const [filteredValue , setFilteredValue] = useState(1)
@@ -72,6 +74,11 @@ const Portfolio = () => {
   }
 
   console.log(filteredValue)
+
+  const filteredItems = filteredValue === 1 ? portfolioData : portfolioData.filter(item=>item.id === filteredValue)
+
+  console.log(filteredItems)
+
   return (
     <section id='portfolio' className='portfolio'>
       <PageHeaderContent headerText ='My Portfolio' icon={<IoMdContact size={40}/>}></PageHeaderContent>
@@ -80,7 +87,7 @@ const Portfolio = () => {
         <ul className='portfolio__content__filter'>
           {
             filterData.map((item)=>(
-              <li onClick={()=>handelClick(item.filterId)} key={item.filterId}>
+              <li className={item.filterId === filteredValue ? 'active' : ''} onClick={()=>handelClick(item.filterId)} key={item.filterId}>
                 {
                   item.label
                 }
@@ -89,8 +96,8 @@ const Portfolio = () => {
         </ul>
         <div className='portfolio__content__cards'>
           {
-            portfolioData.map((item)=>(
-              <div className='portfolio__content__cards__item' key={`cardItem${item.id}`}>
+            filteredItems.map((item)=>(
+              <div className='portfolio__content__cards__item' key={`cardItem${item.name.trim()}`}>
                <div className='portfolio__content__cards__item__image-wrapper'>
                 <a href="">
                   <img alt={item.name} src={item.image}/>

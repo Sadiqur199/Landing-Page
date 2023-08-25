@@ -19,7 +19,42 @@
     padding:12px 20px;
     overflow: hidden;
     transition: all 0.5s ease;
-   }
+
+    &.active{
+      background: var(--yellow-theme-main-color);
+      color: var(--yellow-theme-sub-text-color);
+      font-weight: 600;
+      border-radius: 25px;
+    }
+    }
+    }
+
+    &__cards{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-auto-rows: auto;
+      gap: 1rem;
+      margin-top: 10px;
+
+      &__item{
+         height: 366px;
+         cursor: pointer;
+         position: relative;
+
+         &__image-wrapper{
+          height: 100%;
+
+          a{
+            height: 100%;
+
+            img{
+              height: inherit;
+              object-fit:cover;
+              width: 100%;
+            }
+          }
+         }
+      }
     }
   }
 }
