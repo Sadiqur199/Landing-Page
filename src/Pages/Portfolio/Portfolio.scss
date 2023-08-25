@@ -54,6 +54,35 @@
             }
           }
          }
+         .overlay{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: var(--yellow-theme-main-color);
+
+          div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            text-align: center;
+
+            p{
+              color: var(--yellow-theme-sub-text-color);
+              margin: 0px;
+              font-size: 4rem;
+              position: relative;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+         }
       }
     }
   }

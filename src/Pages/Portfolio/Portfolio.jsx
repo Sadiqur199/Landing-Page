@@ -19,32 +19,38 @@ const portfolioData = [
   {
     id : 3,
     name : 'Fitness Site',
-    image : image2
+    image : image2,
+    link: ''
   },
   {
     id : 3,
     name : 'Promotion Site',
-    image : image3
+    image : image3,
+    link:''
   },
   {
     id : 2,
     name : 'Car Site',
-    image : image4
+    image : image4,
+    link:''
   },
   {
     id : 3,
     name : 'ArtSchool Site',
-    image : image5
+    image : image5,
+    link:''
   },
   {
     id : 2,
     name : 'Restaurant Site',
-    image : image6
+    image : image6,
+    link:''
   },
   {
     id : 3,
     name : 'Car Service Site',
-    image : image7
+    image : image7,
+    link:''
   },
 ]
 
@@ -68,16 +74,20 @@ const filterData = [
 const Portfolio = () => {
 
   const [filteredValue , setFilteredValue] = useState(1)
+  const [hoverValue , setHoverValue] = useState(null)
 
   function handelClick(currentId){
      setFilteredValue(currentId)
   }
 
-  console.log(filteredValue)
+  function handleHover(index){
+     setHoverValue(index)
+  }
+
+  console.log(hoverValue)
 
   const filteredItems = filteredValue === 1 ? portfolioData : portfolioData.filter(item=>item.id === filteredValue)
 
-  console.log(filteredItems)
 
   return (
     <section id='portfolio' className='portfolio'>
@@ -96,17 +106,27 @@ const Portfolio = () => {
         </ul>
         <div className='portfolio__content__cards'>
           {
-            filteredItems.map((item)=>(
-              <div className='portfolio__content__cards__item' key={`cardItem${item.name.trim()}`}>
+            filteredItems.map((item,index)=>(
+              <div className='portfolio__content__cards__item' key={`cardItem${item.name.trim()}`} onMouseEnter={()=>handleHover(index)} onMouseLeave={()=>handleHover(null)}>
                <div className='portfolio__content__cards__item__image-wrapper'>
                 <a href="">
                   <img alt={item.name} src={item.image}/>
                 </a>
 
                </div>
+               <div className='overlay'>
+                   {
+                    index === hoverValue && (
+                      <div>
+                        <p>{item.name}</p>
+                        <button>Visit</button>
+                      </div>
+
+                    )
+                   }
+               </div>
               </div>
-            ))
-          }
+            ))}
 
         </div>
       </div>
