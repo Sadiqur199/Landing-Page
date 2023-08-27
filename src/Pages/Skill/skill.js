@@ -28,6 +28,10 @@ const skillApi = [
         skillName:"REACT",
         percentage:'80'
       },
+      {
+        skillName:"REACT QUERY",
+        percentage:'60'
+      },
     ]
   },
   {
@@ -41,13 +45,14 @@ const skillApi = [
         skillName:"EXPRESS JS",
         percentage:'80'
       },
-      {
-        skillName:"REACT QUERY",
-        percentage:'60'
-      },
+
       {
         skillName:"NEXT JS",
         percentage:'60'
+      },
+      {
+        skillName:"MiddleWare",
+        percentage:'80'
       },
     ]
   },
