@@ -9,48 +9,50 @@ import image4 from '../../images/CarToys-Home.png'
 import image5 from '../../images/Art-Craft-School-Home.png'
 import image6 from '../../images/Chines-Food-Restaurant-Home.png'
 import image7 from '../../images/Car-Doctor.png'
+import { Link } from 'react-router-dom';
 
 const portfolioData = [
   {
     id : 2,
     name : 'Movie Site',
-    image : image1
+    image : image1,
+    link:'https://netflix-aa6bc.web.app/'
   },
   {
     id : 3,
     name : 'Fitness Site',
     image : image2,
-    link: ''
+    link: 'https://gfe-web.netlify.app/'
   },
   {
     id : 3,
     name : 'Promotion Site',
     image : image3,
-    link:''
+    link:'https://zet-web.netlify.app/'
   },
   {
     id : 2,
     name : 'Car Site',
     image : image4,
-    link:''
+    link:'https://toy-car-395e4.web.app/'
   },
   {
     id : 3,
     name : 'ArtSchool Site',
     image : image5,
-    link:''
+    link:'https://art-school-cbe01.web.app/'
   },
   {
     id : 2,
     name : 'Restaurant Site',
     image : image6,
-    link:''
+    link:'https://chines-food-restaurant.web.app/'
   },
   {
     id : 3,
     name : 'Car Service Site',
     image : image7,
-    link:''
+    link:'https://car-doctor-455db.web.app/'
   },
 ]
 
@@ -119,7 +121,7 @@ const Portfolio = () => {
                     index === hoverValue && (
                       <div>
                         <p>{item.name}</p>
-                        <button>Visit</button>
+                        <Link to={item.link} target='_blank'><button>Visit</button></Link>
                       </div>
 
                     )

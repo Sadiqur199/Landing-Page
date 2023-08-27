@@ -4,6 +4,7 @@ import {FaBars} from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import './Navbar.scss'
+import image1 from '../../images/portfolio.jpg'
 
 
 const data = [
@@ -42,7 +43,7 @@ const [toggleIcon , setToggleIcon] = useState(false)
     <div>
     <div className='navbar'>
       <div className='navbar__container'>
-         <Link to={'/'} className='navbar__container__logo'> <FcBusinessman size={30}></FcBusinessman> </Link>
+         <Link to={'/'} className='navbar__container__logo'> <img src={image1} className='navbar__container__logo__image' alt="" /> </Link>
       </div>
       <ul className={`navbar__container__menu ${toggleIcon ? 'active' : ''}`}>
         {
