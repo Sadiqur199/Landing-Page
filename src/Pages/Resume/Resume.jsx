@@ -1,16 +1,15 @@
 import React from 'react';
 import PageHeaderContent from '../../PageHeaderContent/PageHeaderContent';
-import { GrDocument } from 'react-icons/gr'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
  import 'react-vertical-timeline-component/style.min.css'
 import utills from './utills';
 import './Resume.scss'
-import { MdWork } from 'react-icons/md'
+import { MdCastForEducation, MdWork } from 'react-icons/md'
 
 const Resume = () => {
   return (
     <section id='resume' className='resume'>
-      <PageHeaderContent headerText ='My Resume' icon={<GrDocument size={40}/>}></PageHeaderContent>
+      <PageHeaderContent headerText ='My Resume' icon={<MdCastForEducation size={40}/>}></PageHeaderContent>
       <div className='timeline'>
          <div className='timeline__experience'>
           <h3 className='timeline__experience__header-text'>Experience</h3>
@@ -26,7 +25,7 @@ const Resume = () => {
                   color:'var(--yellow-theme-sub-text-color)',
                   border:'1.5px solid var(--yellow-theme-main-color)'
                 }}
-                date='2017-finished'
+                // date='2023-Working'
                 icon={<MdWork/>}
                 iconStyle={{
                   background:'#181818',
@@ -65,7 +64,7 @@ const Resume = () => {
                   color:'var(--yellow-theme-sub-text-color)',
                   border:'1.5px solid var(--yellow-theme-main-color)'
                 }}
-                date='2017-finished'
+                // date='2023-AllFinished'
                 icon={<MdWork/>}
                 iconStyle={{
                   background:'#181818',

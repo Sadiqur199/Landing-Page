@@ -2,17 +2,17 @@
 const utills ={
   experience : [
    {
-    title: 'Web Developer',
+    title: 'Web ',
     subTitle : 'Developer',
     description : 'User Experience , Visual Design'
    },
    {
-    title: 'Frontend Developer',
+    title: 'Frontend ',
     subTitle : 'Developer',
     description : 'User Experience , Visual Design'
    },
    {
-    title: 'Full Stack Developer',
+    title: 'Full Stack ',
     subTitle : 'Developer',
     description : 'User Experience , Visual Design'
    }
@@ -21,17 +21,17 @@ const utills ={
     {
      title: 'Secondary School Certificate',
      subTitle : 'puranpur High School',
-     description : 'Background Science'
+     description : 'Background Science.Study Complete(2017)'
     },
     {
      title: ' Higher Secondary School Certificate',
      subTitle : 'Kazipur Govt  Mansur Ali College',
-     description : 'Background Science'
+     description : 'Background Science.Study Complete(2019)'
     },
     {
      title: 'B.SC IN CSE',
      subTitle : 'Bangladesh University Business & Technology',
-     description : 'Major Software Engineering'
+     description : 'Major Software Engineering.Study Complete(2023)'
     }
    ]
 
