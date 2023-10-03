@@ -9,11 +9,12 @@ import image4 from '../../images/CarToys-Home.png'
 import image5 from '../../images/Art-Craft-School-Home.png'
 import image6 from '../../images/Chines-Food-Restaurant-Home.png'
 import image7 from '../../images/Car-Doctor.png'
+import image8 from '../../images/Travel-.png'
 import { Link } from 'react-router-dom';
 
 const portfolioData = [
   {
-    id : 2,
+    id : 3,
     name : 'Movie Site',
     image : image1,
     link:'https://netflix-aa6bc.web.app/'
@@ -26,21 +27,15 @@ const portfolioData = [
   },
   {
     id : 3,
-    name : 'Promotion Site',
-    image : image3,
-    link:'https://zet-web.netlify.app/'
-  },
-  {
-    id : 2,
-    name : 'Car Site',
-    image : image4,
-    link:'https://toy-car-395e4.web.app/'
+    name : 'Tavel Agency',
+    image : image8,
+    link:'https://world-travel1-website.netlify.app/'
   },
   {
     id : 3,
-    name : 'ArtSchool Site',
-    image : image5,
-    link:'https://art-school-cbe01.web.app/'
+    name : 'Promotion Site',
+    image : image3,
+    link:'https://zet-web.netlify.app/'
   },
   {
     id : 2,
@@ -49,11 +44,25 @@ const portfolioData = [
     link:'https://chines-food-restaurant.web.app/'
   },
   {
-    id : 3,
+    id : 2,
+    name : 'Car Site',
+    image : image4,
+    link:'https://toy-car-395e4.web.app/'
+  },
+  {
+    id : 2,
+    name : 'ArtSchool Site',
+    image : image5,
+    link:'https://art-school-cbe01.web.app/'
+  },
+
+  {
+    id : 2,
     name : 'Car Service Site',
     image : image7,
     link:'https://car-doctor-455db.web.app/'
   },
+
 ]
 
 const filterData = [
